@@ -126,6 +126,21 @@ This Docker setup provides a complete development environment for both React and
    jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
    ```
 
+### Database Administration
+
+1. **Access pgAdmin:**
+   - Open `http://localhost:5050` in your browser
+   - Login with:
+     - **Email**: `admin@example.com`
+     - **Password**: `devpassword`
+
+2. **Connect to PostgreSQL databases:**
+   - Click "Add New Server"
+   - **Name**: Your database name
+   - **Host**: `host.docker.internal` (for host databases) or container name
+   - **Port**: Database port (e.g., 5432 for PostgreSQL)
+   - **Username/Password**: Your database credentials
+
 ## Environment Configuration
 
 The development environment uses environment variables for flexible configuration. All settings are defined in the `.env` file.
@@ -140,6 +155,7 @@ The development environment uses environment variables for flexible configuratio
 | `DJANGO_PORT` | 8000 | Django/FastAPI applications |
 | `WEB_PORT` | 8080 | Alternative web server |
 | `JUPYTER_PORT` | 8888 | Jupyter Notebook interface |
+| `PGADMIN_PORT` | 5050 | pgAdmin web interface |
 
 ### Setup Steps
 
@@ -186,6 +202,7 @@ The following ports are configurable via environment variables:
 - **DJANGO_PORT** (default 8000): Django/FastAPI applications
 - **WEB_PORT** (default 8080): Alternative web server
 - **JUPYTER_PORT** (default 8888): Jupyter Notebook interface
+- **PGADMIN_PORT** (default 5050): pgAdmin web interface
 
 Access your services at:
 - SSH: `ssh developer@localhost -p ${SSH_PORT}`
@@ -193,6 +210,7 @@ Access your services at:
 - Flask: `http://localhost:${FLASK_PORT}`
 - Django/FastAPI: `http://localhost:${DJANGO_PORT}`
 - Jupyter: `http://localhost:${JUPYTER_PORT}`
+- pgAdmin: `http://localhost:${PGADMIN_PORT}`
 
 ## Directory Structure
 
