@@ -5,7 +5,7 @@ This Docker setup provides a complete development environment for both React and
 ## Features
 
 - **Node.js 18** for React development
-- **Python 3** with virtual environment
+- **Python 3.12** with virtual environment
 - **Pre-installed packages**:
   - React: create-react-app, Vite
   - Python: Flask, Django, FastAPI, Jupyter, NumPy, Pandas, and more
